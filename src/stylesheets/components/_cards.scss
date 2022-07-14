@@ -1,0 +1,197 @@
+// _time-card.scss
+
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors" as *;
+@use "sass:color";
+
+.user-card {
+  position: relative;
+  background-color: $darkBlue;
+  border-radius: 15px;
+  
+  &__user-div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 33px 41px 31px 29px;
+    background-color: $blue;
+    border-radius: 15px;
+
+    @include breakpoint-up(large) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 33px 41px 73px 32px;
+    }
+  }
+
+
+
+  &__image {
+    // using border-box so increase
+    // height and width by border amount
+    height: 70px;
+    width: 70px;
+    border: 3px solid white;
+    border-radius: 50%;
+
+    @include breakpoint-up(large) {
+      position: relative;
+      left: -3px;
+      height: 84px;
+      width: 84px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__name-div {
+    margin-bottom: 6px;
+  }
+
+  &__report-label {
+    color: $paleBlue;
+    margin-bottom: 3px;
+  }
+
+  &__user-name {
+    color: white;
+  }
+
+  &__toggle-div {
+    background-color: $darkBlue;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include breakpoint-up(large) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 25px 32px;
+    }
+  }
+
+  &__btn-toggle {
+    border: none;
+    background: none;
+    color: $desatBlue;
+    width: 33.33%;
+    cursor: pointer;
+
+    @include breakpoint-up(large) {
+      width: auto;
+
+      &:not(:last-child) {
+        margin-bottom: 21px;
+      }
+    }
+
+    &.selected {
+      color: white;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+
+.time-card {
+  position: relative;
+  color: white;
+  background-color: $darkBlue;
+
+  border-radius: 15px;
+
+  padding: 28px 24px;
+
+  cursor: pointer;
+
+  @include breakpoint-up(large) {
+    padding: 28px 30px 33px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: -1;
+    top: -38px;
+    left: 0;
+    width: 100%;
+    height: 53px;
+    border-radius: 15px 15px 0 0;
+    background-repeat: no-repeat;
+
+    @include breakpoint-up(large) {
+      top: -45px;
+    }
+  }
+
+  // pseudo hover class used with javascript so that the ellipsis button can
+  // be highlighted without highlighting the whole card (as shown in the active states preview)
+  &.hovered {
+    background-color: color.adjust($darkBlue, $lightness: 10%);
+  }
+
+  &__title-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__hours-div {
+    display: none;
+
+    &.active {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      @include breakpoint-up(medium) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__previous {
+    color: $paleBlue;
+  }
+
+  &__hours {
+
+    @include breakpoint-up(large) {
+      margin-bottom: 7px;
+    }
+  }
+
+  &__btn-ellipsis {
+    height: 5px;
+    width: 21px;
+    cursor: pointer;
+    border: none;
+    background: transparent url("../assets/icon-ellipsis.svg");
+
+    
+    &:hover {
+      filter:brightness(3);
+    }
+    
+  }
+
+
+}

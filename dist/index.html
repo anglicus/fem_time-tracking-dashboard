@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+<body>
+  <main class="dashboard">
+    <section class="dashboard__user-card user-card">
+      <div class="user-card__user-div">
+        <img src="./assets/image-jeremy.png" class="user-card__image" alt="user image">
+        <div class="user-card__name-div">
+          <p class="user-card__report-label">Report for</p>
+          <h1 class="user-card__user-name">Jeremy Robson</h1>
+        </div>
+      </div>
+      <div class="user-card__toggle-div">
+        <button class="user-card__btn-daily user-card__btn-toggle" name="daily" data-target-div="daily-div">Daily</button>
+        <button class="user-card__btn-weekly user-card__btn-toggle selected" name="weekly" data-target-div="weekly-div">Weekly</button>
+        <button class="user-card__btn-monthly user-card__btn-toggle" name="monthly" data-target-div="monthly-div">Monthly</button>
+      </div>
+    </section>
+    <section class="dashboard__work-card dashboard__time-card time-card" data-title="Work">
+      <div class="time-card__title-div">
+        <h2 class="time-card__title">Work</h2>
+        <button class="time-card__btn-ellipsis" name="menu"></button>
+      </div>
+      <div class="time-card__hours-div daily-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Yesterday</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div weekly-div active">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Week</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div monthly-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Month</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+    </section>
+    <section class="dashboard__play-card dashboard__time-card time-card" data-title="Play">
+      <div class="time-card__title-div">
+        <h2 class="time-card__title">Play</h2>
+        <button class="time-card__btn-ellipsis" name="menu"></button>
+      </div>
+      <div class="time-card__hours-div daily-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Yesterday</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div weekly-div active">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Week</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div monthly-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Month</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>   
+    </section>
+    <section class="dashboard__study-card dashboard__time-card time-card" data-title="Study">
+      <div class="time-card__title-div">
+        <h2 class="time-card__title">Study</h2>
+        <button class="time-card__btn-ellipsis" name="menu"></button>
+      </div>
+      <div class="time-card__hours-div daily-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Yesterday</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div weekly-div active">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Week</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div monthly-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Month</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+    </section>
+    <section class="dashboard__exercise-card dashboard__time-card time-card" data-title="Exercise">
+      <div class="time-card__title-div">
+        <h2 class="time-card__title">Exercise</h2>
+        <button class="time-card__btn-ellipsis" name="menu"></button>
+      </div>
+      <div class="time-card__hours-div daily-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Yesterday</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div weekly-div active">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Week</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div monthly-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Month</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+    </section>
+    <section class="dashboard__social-card dashboard__time-card time-card" data-title="Social">
+      <div class="time-card__title-div">
+        <h2 class="time-card__title">Social</h2>
+        <button class="time-card__btn-ellipsis" name="menu"></button>
+      </div>
+      <div class="time-card__hours-div daily-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Yesterday</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div weekly-div active">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Week</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div monthly-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Month</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div> 
+    </section>
+    <section class="dashboard__self-care-card dashboard__time-card time-card" data-title="Self Care">
+      <div class="time-card__title-div">
+        <h2 class="time-card__title">Self Care</h2>
+        <button class="time-card__btn-ellipsis" name="menu"></button>
+      </div>
+      <div class="time-card__hours-div daily-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Yesterday</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div weekly-div active">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Week</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+      <div class="time-card__hours-div monthly-div">
+        <h3 class="time-card__hours"><span class="time-card__hours-value"></span>hrs</h3>
+        <p class="time-card__previous"><span class="time-card__previous-interval">Last Month</span> - <span class="time-card__previous-hours"></span>hrs</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/anglicus">James English</a>.
+  </div>
+</body>
+<script src="./js/index.js"></script>
+</html>
